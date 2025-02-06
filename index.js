@@ -1,5 +1,7 @@
 import { cargarCartas } from "./Components/Tablero/tablero.js";
+import { headers } from "./Components/Header/header.js";
 
+headers();
 cargarCartas();
 
 let Dom = document.querySelector("#root");
@@ -9,7 +11,8 @@ contenedor.className = "div-Contenedor";
 
 let header = document.createElement('div');
 header.className = "div-header";
-contenedor.appendChild(header)
+header.appendChild(headers());
+contenedor.appendChild(header);
 
 let progreso = document.createElement('div');
 progreso.className = "div-progreso";
