@@ -14,7 +14,7 @@ function cargarCartas(){
     mezclarCartas().forEach(letra => {
         div2.appendChild(item(letra))
     });
-
+    
     return div2;
 };
 

@@ -32,4 +32,15 @@
     font-weight: 600;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    cursor: pointer;
+}
+
+.carta:hover{
+    background-color: rgb(241, 120, 6);
+    transition: 0.2s;
+}
+
+.marcado{
+    background-color: rgb(241, 120, 6);
 }

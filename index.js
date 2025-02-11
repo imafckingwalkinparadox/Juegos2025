@@ -28,3 +28,10 @@ footer.className = "div-footer";
 contenedor.appendChild(footer);
 
 Dom.appendChild(contenedor);
+
+let todasLasCartasDelDOM = document.querySelectorAll('.carta');
+todasLasCartasDelDOM.forEach (cadaCarta => {
+    cadaCarta.addEventListener("click", ()=>{
+        cadaCarta.classList.add("marcado");
+    });
+});
