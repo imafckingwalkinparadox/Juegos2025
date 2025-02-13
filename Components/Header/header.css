@@ -6,6 +6,7 @@
     background-image: url("https://c.wallhere.com/photos/76/bc/2560x1600_px_Blur_fruits_grapes_landscape_leaves_nature_Vineyard-1712635.jpg!d");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
     background-position: top;
     width: 100%;
     color: white;
@@ -25,7 +26,8 @@
 
 .header-buttons {
     display: flex;
-    gap: 10px;
+    gap: 70px;
+    padding: 10px;
 }
 
 .header-button {
