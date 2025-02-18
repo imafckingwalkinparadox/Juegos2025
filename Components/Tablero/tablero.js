@@ -1,41 +1,14 @@
-import {mezclarCartas } from "./data.js";
+import { cargarCartas } from "./funcionesCarta.js";
+import { Cartas } from "./data.js";
 
-function item(contenido){
-    let div1 = document.createElement('div'); 
-    div1.className = "carta";
-    div1.textContent = contenido;
-
-    let front = document.createElement('div');
-    front.className = "Front";
-
-    let back = document.createElement('div');
-    back.className = "Back";
-    back.innerText = contenido;
-
-    div1.appendChild(front);
-    div1.appendChild(back);
-
-
-    div1.addEventListener("click", ()=>{
-        div1.classList.toggle("volteada");
-    });
-    
-
-    return div1;
-
-
+function barajearCartas(){
+    let allCartas = Cartas.concat(Cartas); // Duplicamos el array para tener pares de cartas
+    return allCartas; // Devolvemos las cartas para que se pasen a cargarCartas
 }
 
-function cargarCartas(){
-    let div2 = document.createElement('div');
-    div2.className = "div_tablero2";
-
-    mezclarCartas().forEach(letra => {
-        div2.appendChild(item(letra))
-    });
-    
-    return div2;
+function cargarTablero(){
+    let cartasMezcladas = barajearCartas();
+    return cargarCartas(cartasMezcladas); // Pasamos las cartas mezcladas a cargarCartas
 }
 
-
-export{cargarCartas}
+export { cargarTablero };
